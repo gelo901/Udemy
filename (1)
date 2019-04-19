@@ -19,16 +19,24 @@ let appData = {
 	'savings': false,
 }
 
-let qusten1 = confirm(`“Введите обязательную статью расходов в этом месяце”
+let q1 = prompt(money) ;
+
+let q2 = prompt(time);
+
+let q3 = prompt(`“Введите обязательную статью расходов в этом месяце”
 `);
 
-let qusten2 = prompt(`“Во сколько обойдется?”
-`,`15$`);
+let q4 = prompt(`“Во сколько обойдется?”
+`,`15`);
 
 
-appData.expenses = qusten2;
+appData.bujet = q1;
+appData.timeData = q2;
+appData.expenses = q3;
+appData.optionalExpenses = q4;
 
-alert(appData.expenses)
+
+alert(appData.bujet / 30)
 
  </script>
  </body>
