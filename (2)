@@ -1,0 +1,102 @@
+<!DOCTYPE/>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+ </head>
+ <body>
+ <script>
+
+'use script';
+
+let money =  +prompt(`Ваш бюджет за месяц?`),
+		time  =   prompt(`"Введите дату в формате YYYY-MM-DD"`);
+
+let appData = {
+	'bujet': money,
+	'timeData': time,
+	'expenses': '',
+	'optionalExpenses': '',
+	'income': '',
+	'savings': false,
+}
+
+
+/*for(let i = 0; i<2; i++ ){
+
+		let a = prompt(`“Введите обязательную статью расходов в этом месяце”`);
+		let b = prompt(`“Во сколько обойдется?”`);
+
+		if((typeof(a)) === 'string' && (typeof(a)) != null  && (typeof(b)) != null && a != '' && a != '' && a.length <= 50){
+			console.log("done");
+			appData.expenses[a] = b;
+
+		} else{
+			i--;
+			console.log("Назад!");
+
+		}
+	
+
+}*/ // for
+
+/*let i = 0;
+do{
+	
+	let a = prompt(`“Введите обязательную статью расходов в этом месяце”`);
+		let b = prompt(`“Во сколько обойдется?”`);
+
+		if((typeof(a)) === 'string' && (typeof(a)) != null  && (typeof(b)) != null && a != '' && a != '' && a.length <= 50){
+			console.log("done");
+			appData.expenses[a] = b;
+			i++;
+
+		} else{
+			i--;
+			console.log("Назад!");
+
+		}
+}while(i < 2)*/ // do while 
+
+let i = 0;
+while(i < 2){
+
+	let a = prompt(`“Введите обязательную статью расходов в этом месяце”`);
+		let b = prompt(`“Во сколько обойдется?”`);
+
+		if((typeof(a)) === 'string' && (typeof(a)) != null  && (typeof(b)) != null && a != '' && a != '' && a.length <= 50){
+			console.log("done");
+			appData.expenses[a] = b;
+			i++;
+
+		} else{
+			i--;
+			console.log("Назад!");
+
+		}
+
+
+} // while
+
+
+
+appData.moneyperDay = appData.bujet / 30
+console.log("Ежидневный бюджет " + appData.moneyperDay);
+
+if( appData.moneyperDay < 100){
+	console.log(`Минимальный бюджет`);
+} 
+else if(appData.moneyperDay > 100){
+	console.log(`Средний бюджет`);
+} 
+else if(appData.moneyperDay > 1000){
+	console.log(`Высокий бюджет`);
+} 
+else{
+	console.log(`error!`);
+}
+
+
+ </script>
+ </body>
+</html>
